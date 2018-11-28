@@ -14,14 +14,14 @@ class UserTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+    /*public function testExample()
      {
          $user = new User();
          $user->name ='Mohamad';
          $user->email ='maj38@nje.edu';
          $user->password='password';
          $this->assertTrue($user->save());
-     }
+     }*/
 
     public function testUpdateUserName()
     {
@@ -31,5 +31,11 @@ class UserTest extends TestCase
 
         $users->where('name', 'Steve Smith')->update(['name' => 'Johnny Boys']);
         $this->assertTrue($users->save());
+    }
+    public function testDeleteUser()
+    {
+        $user = User::all()->last();
+        //dd($user);
+        $this->assertTrue($user->delete());
     }
 }
