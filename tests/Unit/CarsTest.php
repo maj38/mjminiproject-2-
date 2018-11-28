@@ -31,7 +31,12 @@ class CarsTest extends TestCase
         $car = Car::all()->last();
         $car-> where('id', '51')-> update(['year' => 2000]);
         $this->assertTrue($car->save());
-        dd($car);
+        //dd($car);
     }
-
+    public function testDeleteCar()
+    {
+        $car = Car::all()->last();
+        //dd($car);
+        $this->assertTrue($car->delete());
+    }
 }
