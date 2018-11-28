@@ -14,23 +14,22 @@ class UserTest extends TestCase
      *
      * @return void
      */
-    /* public function testExample()
+    public function testExample()
      {
          $user = new User();
          $user->name ='Mohamad';
-         $user->email ='maj38@njit.edu';
+         $user->email ='maj38@nje.edu';
          $user->password='password';
          $this->assertTrue($user->save());
-     }*/
+     }
 
     public function testUpdateUserName()
     {
-        $user = User::all()->last();
+        $users = User::all()->last();
 
         //dd($user);
-        //$user->name="Steve Smith"; //To assign a name and update it using update()
-        //$this->assertTrue($user->update());
-        $user->where('name', 'Mohamad')->update(['name' => 'Steve Smith']);
-        $this->assertTrue($user->save());
+
+        $users->where('name', 'Steve Smith')->update(['name' => 'Johnny Boys']);
+        $this->assertTrue($users->save());
     }
 }
