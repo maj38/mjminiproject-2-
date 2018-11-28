@@ -1,3 +1,3 @@
 <footer class="container">
-    <p>&copy; Company 2017-2018</p>
+    <p>&copy; IS601 Mini Project 2</p>
 </footer>

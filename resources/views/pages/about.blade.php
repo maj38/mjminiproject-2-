@@ -3,7 +3,7 @@
 @section('content')
 
 
-    <h1>About Page</h1>
+    <h1>WELCOME TO MY PAGE</h1>
 
 
 @endsection
