@@ -39,4 +39,12 @@ class CarsTest extends TestCase
         //dd($car);
         $this->assertTrue($car->delete());
     }
+    public function testCarsCount()
+    {
+        $cars = Car::all();
+        $carsCount= count($cars);
+        $this->assertEquals(53,$carsCount);
+        $this->assertInternalType('int',$carsCount);
+        dd($carsCount);
+    }
 }
