@@ -32,17 +32,20 @@ class UserTest extends TestCase
         $users->where('name', 'Steve Smith')->update(['name' => 'Johnny Boys']);
         $this->assertTrue($users->save());
     }
-    public function testDeleteUser()
+   /* public function testDeleteUser()
     {
         $user = User::all()->last();
         //dd($user);
         $this->assertTrue($user->delete());
     }
+   */ //
+
     public function testUserCount()
     {
         $users = User::all();
         $usersCount = count($users);
         //$this->assertEquals(50,$usersCount);
         $this->assertInternalType("int",$usersCount);
+        //dd($usersCount);
     }
 }
